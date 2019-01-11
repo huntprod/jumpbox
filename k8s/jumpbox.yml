@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jumpbox
+spec:
+  containers:
+    - name: jumpbox
+      image: huntprod/jumpbox
+      imagePullPolicy: Always
+      command: ['/bin/sleep']
+      args: ['10000d']
