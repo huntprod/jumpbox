@@ -1,3 +1,10 @@
+FROM ubuntu:18.04 AS build
+RUN apt-get update \
+ && apt-get install -y build-essential
+
+COPY pause.c .
+RUN make pause && chmod 0755 pause && cp pause /usr/bin
+
 FROM ubuntu:18.04
 MAINTAINER James Hunt <james@niftylogic.com>
 
@@ -66,4 +73,5 @@ RUN curl -Lo /usr/bin/shield \
       https://github.com/starkandwayne/shield/releases/download/8.0.17/shield-darwin-amd64 \
  && chmod 0755 /usr/bin/shield
 
+COPY --from=build /usr/bin/pause /bin/pause
 CMD ["/bin/bash"]
