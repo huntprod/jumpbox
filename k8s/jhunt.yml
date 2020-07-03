@@ -7,5 +7,4 @@ spec:
     - name: jumpbox
       image: huntprod/jumpbox:jhunt
       imagePullPolicy: Always
-      command: ['/bin/sleep']
-      args: ['10000d']
+      command: [pause]
