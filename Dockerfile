@@ -1,11 +1,11 @@
-FROM ubuntu:18.04 AS build
+FROM ubuntu:20.04 AS build
 RUN apt-get update \
  && apt-get install -y build-essential
 
 COPY pause.c .
 RUN make pause && chmod 0755 pause && cp pause /usr/bin
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 MAINTAINER James Hunt <james@niftylogic.com>
 
 RUN apt-get update \
