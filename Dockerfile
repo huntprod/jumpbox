@@ -14,7 +14,7 @@ RUN apt-get update \
       curl wget \
       vim-nox nano \
       build-essential \
-      iputils-ping iputils-tracepath dnsutils net-tools \
+      iproute2 iputils-ping iputils-tracepath dnsutils net-tools \
       nmap mtr tcpdump ipgrab tshark iptraf-ng \
       netcat netrw cryptcat \
       rsync \
