@@ -16,10 +16,10 @@ To run this in Docker, if you are a jhunt:
 
 To run this in Kubernetes:
 
-    kubectl apply -f k8s/jumpbox.yml
+    kubectl apply -f https://raw.githubusercontent.com/huntprod/jumpbox/master/k8s/jumpbox.yml
     kubectl exec -it jumpbox /bin/bash
 
 To run this in Kubernetes, if you are a jhunt:
 
-    kubectl apply -f k8s/jhunt.yml
+    kubectl apply -f https://raw.githubusercontent.com/huntprod/jumpbox/master/k8s/jhunt.yml
     kubectl exec -it jhunt /bin/bash
