@@ -1,7 +1,14 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+    name: jumpboxen
+---
 apiVersion: v1
 kind: Pod
 metadata:
   name: jumpbox
+  namespace: jumpboxen
 spec:
   containers:
     - name: jumpbox
